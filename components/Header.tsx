@@ -7,9 +7,9 @@ const Header = () => {
     return (
         <header className='grid items-center justify-between grid-cols-2 p-5 md:grid-cols-5'>
             <figure className='flex items-center space-x-2'>
-                <img src="assets/lottery.png" alt="lottery" className='w-20 h-20' />
+                <img src="assets/lottery-white.png" alt="lottery" className='w-20 h-20' />
                 <div className=''>
-                    <h1 className='text-lg font-bold text-white uppercase'>Ellion's Draw</h1>
+                    <h1 className='font-bold text-white uppercase text-md'>Ellison's Draw</h1>
                     <p className='text-xs truncate text-emerald-500'>User...</p>
                 </div>
             </figure>
