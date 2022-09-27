@@ -3,14 +3,18 @@ import Image from 'next/image'
 import NavButton from './NavButton';
 import { Bars3BottomRightIcon } from '@heroicons/react/24/solid';
 
+import { useAddress, useDisconnect, useMetamask } from "@thirdweb-dev/react";
+
 const Header = () => {
+    const address = useAddress();
+
     return (
         <header className='grid items-center justify-between grid-cols-2 p-5 md:grid-cols-5'>
             <figure className='flex items-center space-x-2'>
                 <img src="assets/lottery-white.png" alt="lottery" className='w-20 h-20' />
                 <div className=''>
                     <h1 className='font-bold text-white uppercase text-md'>Ellison's Draw</h1>
-                    <p className='text-xs truncate text-emerald-500'>User...</p>
+                    <p className='text-xs truncate text-emerald-500'>User: {address?.substring(0, 5)}...{address?.substring(address.length, address.length - 5)}</p>
                 </div>
             </figure>
             <nav className='items-center justify-center hidden rounded-md md:flex md:col-span-3'>
